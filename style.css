@@ -50,6 +50,9 @@ body {
     gap: 5%;
     align-items: center;
 }
+.navbar__s4{
+    display: none;
+}
 
 .mylearning{
     position: relative;
@@ -59,11 +62,12 @@ body {
 .mylearning__popup{
     position: absolute;
     background-color: white;
-    width: 100px;
+    width: 250px;
     border: solid black 1px;
-    top: 100%;
+    top: 200%;
     padding: 20px;
     display: none;
+    
     
 }
 .mylearning:hover .mylearning__popup{
@@ -160,7 +164,9 @@ body {
 }
 
 .course-card {
-    width: 300px;  
+    flex-grow: 1;
+    flex-basis: 20%;  
+    margin: 20px;
 
 }
 
@@ -225,3 +231,27 @@ body {
 
 } 
 
+
+@media  screen and (max-width:800px) {
+
+    body{
+        font-size: 16px;
+    }
+    
+}
+ @media  screen and (max-width:600px) {
+    .course-card{
+        flex-basis: 40%;
+    }
+    .categories{
+        display: none;
+    }
+   .navbar__s2,.navbar__s3{
+        display: none
+    }
+    .navbar__s4{
+        display: block;
+    }
+
+    
+}
